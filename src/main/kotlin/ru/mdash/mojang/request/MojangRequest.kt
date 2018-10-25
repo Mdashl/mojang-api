@@ -3,16 +3,8 @@ package ru.mdash.mojang.request
 import ru.mdash.mojang.reply.NameChange
 import ru.mdash.mojang.reply.Profile
 
-class MojangRequest(val type: Type, private val parameter: Pair<Parameter, Any>) {
-  val url: String by lazy {
-    var url = BASE_URL
-
-    val (key, value) = parameter
-
-    url += "${key.queryPath}$value${key.queryParameters}"
-
-    url
-  }
+class MojangRequest(val type: Type, parameter: Parameter, value: Any) {
+  val url: String = "$BASE_URL${parameter.queryPath}$value${parameter.queryParameters}"
 
   enum class Parameter(val queryPath: String, val queryParameters: String = "") {
     PROFILE_BY_NAME("users/profiles/minecraft/"),
