@@ -1,9 +1,9 @@
-package ru.mdash.mojang
+package com.github.mdashl.mojang
 
+import com.github.mdashl.mojang.request.MojangRequest
 import com.google.gson.Gson
 import com.google.gson.JsonParser
 import org.jsoup.Jsoup
-import ru.mdash.mojang.request.MojangRequest
 
 @Suppress("unused")
 object MojangAPI {

@@ -2,7 +2,7 @@ plugins {
   id 'org.jetbrains.kotlin.jvm' version '1.2.71'
 }
 
-group 'ru.mdash.mojang'
+group 'com.github.mdashl.mojang'
 version '1.0'
 
 repositories {

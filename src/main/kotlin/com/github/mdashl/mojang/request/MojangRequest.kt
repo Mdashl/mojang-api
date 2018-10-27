@@ -1,7 +1,7 @@
-package ru.mdash.mojang.request
+package com.github.mdashl.mojang.request
 
-import ru.mdash.mojang.reply.NameChange
-import ru.mdash.mojang.reply.Profile
+import com.github.mdashl.mojang.reply.NameChange
+import com.github.mdashl.mojang.reply.Profile
 
 class MojangRequest(val type: Type, parameter: Parameter, value: Any) {
   val url: String = "$BASE_URL${parameter.queryPath}$value${parameter.queryParameters}"
